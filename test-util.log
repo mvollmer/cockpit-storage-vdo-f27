@@ -1,0 +1,44 @@
+# ./tools/tap-driver --test-name dist/storaged/test-util.html --log-file dist/storaged/test-util.log --trs-file dist/storaged/test-util.trs --color-tests yes --enable-hard-errors yes --expect-failure no -- ./test/common/tap-cdp --strip=./ -- ./test-server ./dist/storaged/test-util.html
+
+DevTools listening on ws://127.0.0.1:9816/devtools/browser/5da79d7b-0966-4b57-ba7e-a5b98dfa82bf
+cockpit-bridge-Message: incompatible: package requires a later version of cockpit: 999.5 > 160.x
+cockpit-bridge-Message: requires: package has an unknown requirement: unknown
+> log: # module: 
+> log: # test: format_delay
+> log: ok 1 - format_delay: format_delay(15550000) = 4 hours
+> log: # test: compare_versions
+> log: ok 2 - compare_versions: compare_versions(, ) = 0
+> log: ok 3 - compare_versions: compare_versions(0, 0) = 0
+> log: ok 4 - compare_versions: compare_versions(1, 0) = 1
+> log: ok 5 - compare_versions: compare_versions(0, 1) = -1
+> log: ok 6 - compare_versions: compare_versions(2, 1.9) = 1
+> log: ok 7 - compare_versions: compare_versions(2.0, 2) = 1
+> log: ok 8 - compare_versions: compare_versions(2.1.6, 2.5) = -1
+> log: ok 9 - compare_versions: compare_versions(2..6, 2.0.6) = 0
+> log: # test: mdraid_name_nohostnamed
+> log: ok 10 - mdraid_name_nohostnamed: remote host name is skipped when hostnamed is not available
+> log: # test: mdraid_name_remote
+> log: ok 11 - mdraid_name_remote: expected name for remote host
+> log: # test: mdraid_name_local
+> log: ok 12 - mdraid_name_local: expected name for local host
+> log: 1..12
+> log: cockpittest-tap-done
+# module: 
+# test: format_delay
+ok 1 - format_delay: format_delay(15550000) = 4 hours
+# test: compare_versions
+ok 2 - compare_versions: compare_versions(, ) = 0
+ok 3 - compare_versions: compare_versions(0, 0) = 0
+ok 4 - compare_versions: compare_versions(1, 0) = 1
+ok 5 - compare_versions: compare_versions(0, 1) = -1
+ok 6 - compare_versions: compare_versions(2, 1.9) = 1
+ok 7 - compare_versions: compare_versions(2.0, 2) = 1
+ok 8 - compare_versions: compare_versions(2.1.6, 2.5) = -1
+ok 9 - compare_versions: compare_versions(2..6, 2.0.6) = 0
+# test: mdraid_name_nohostnamed
+ok 10 - mdraid_name_nohostnamed: remote host name is skipped when hostnamed is not available
+# test: mdraid_name_remote
+ok 11 - mdraid_name_remote: expected name for remote host
+# test: mdraid_name_local
+ok 12 - mdraid_name_local: expected name for local host
+1..12
